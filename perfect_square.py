@@ -7,20 +7,20 @@
 
 def on_all(loop_number, loop_number_2):
     # this function is to calculate the prefect square
-    total = 0
-    loop_counter = 0
+    total_2 = []
     for loop_counter in loop_number:
         total = loop_number[loop_counter] * loop_number_2[loop_counter]
-    total = total
+        total_2.append(total)
 
-    return total
+    return total_2
+
 
 def main():
     # this function is to shows the prefect square
 
     loop_number = []
     loop_number_2 = []
-    
+
     # process
     print("starting ...")
     print("")
@@ -30,13 +30,17 @@ def main():
 
     for loop_counter_2 in range(0, 21):
         loop_number_2.append(loop_counter_2)
-        
+
     # call function
     on_all_2 = on_all(loop_number, loop_number_2)
-    
+
     # output
     for loop_counter_3 in range(0, len(loop_number)):
-        print("{0} x {1} = {2}".format(loop_counter_3, loop_counter_3, on_all_2[loop_counter_3]))
+        print(
+            "{0} x {1} = {2}".format(
+                loop_counter_3, loop_counter_3, on_all_2[loop_counter_3]
+            )
+        )
 
     print("\nDone")
 
